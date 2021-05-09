@@ -10,11 +10,6 @@ Tetrahedron::Tetrahedron() {
     this->pointB = Point(0, 0, 0);
     this->pointC = Point(0, 0, 0);
     this->pointD = Point(0, 0, 0);
-    try {
-        this->validatePoints();
-    } catch (EqualPointException & e) {
-        std::cout << e.what() << std::endl;
-    }
 }
 
 bool Tetrahedron::validatePoints() {
@@ -26,6 +21,15 @@ bool Tetrahedron::validatePoints() {
 }
 
 Tetrahedron::Tetrahedron(const Point &pointA, const Point &pointB, const Point &pointC, const Point &pointD) {
+    this->pointA = pointA;
+    this->pointB = pointB;
+    this->pointC = pointC;
+    this->pointD = pointD;
+    try {
+        this->validatePoints();
+    } catch (EqualPointException & e) {
+        std::cout << e.what() << std::endl;
+    }
 }
 
 Tetrahedron::Tetrahedron(const Tetrahedron &tetrahedron) : Triangle(tetrahedron) {
