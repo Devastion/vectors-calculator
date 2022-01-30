@@ -2,7 +2,6 @@
 // Created by Dimitar Banev on 09/05/2021.
 //
 
-#include <ntdef.h>
 #include "tetrahedron.hpp"
 
 Tetrahedron::Tetrahedron() {
